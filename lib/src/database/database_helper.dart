@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:map_google_map/src/model/contac_model.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -83,6 +84,25 @@ class DatabaseHelper {
       products.toJson(),
       where: "$columnId = ?",
       whereArgs: [products.id],
+    );
+  }
+}
+
+class VladTeam extends StatefulWidget {
+  const VladTeam({Key? key}) : super(key: key);
+
+  @override
+  State<VladTeam> createState() => _VladTeamState();
+}
+
+class _VladTeamState extends State<VladTeam> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: ListView(
+        children: [],
+      ),
     );
   }
 }
